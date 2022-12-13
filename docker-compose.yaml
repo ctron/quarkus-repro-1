@@ -1,0 +1,14 @@
+version: '2'
+
+services:
+
+  mosquitto:
+    image: docker.io/library/eclipse-mosquitto:1.6.5
+    command:
+      - /usr/sbin/mosquitto
+      - -v
+      - -c
+      - /mosquitto/config/mosquitto.conf
+    ports:
+    - "1883:1883"
+    - "9001:9001"
